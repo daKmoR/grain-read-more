@@ -18,11 +18,24 @@ Import the package.
 <link rel="import" href="/bower_components/read-more/read-more.html">
 ```
 
-To define a custom dialog with markup, use the `nebula-dialog` element.
+Create the element providing a more slot.
 
 ```html
 <read-more>
   <h3>Read More</h3>
+  <div slot="more">
+    The Content is only visible if read-more is opened
+  </div>
+</read-more>
+```
+
+* Elements tagged with `slot="more"` will only become visible if read-more is opened.
+* Elements tagged with `slot="intro"` will always be visible.
+* Elements with no slot attributed will trigger opened to be "true"/"false"
+
+```html
+<read-more opened="true">
+  <h3>Read More - opened by default</h3>
   <div slot="more">
     The Content is only visible if read-more is opened
   </div>
