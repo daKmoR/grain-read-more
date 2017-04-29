@@ -1,5 +1,6 @@
-<link rel="import" href="../../PolymerSetup/DomModules/BaseElement.html">
-<link rel="import" href="../../PolymerSetup/DomModules/ResponsiveBehavior.html">
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../update-inline-style-behavior/update-inline-style-behavior.html">
+<link rel="import" href="../responsive-behavior/responsive-behavior.html">
 
 <dom-module id="read-more">
 	<template>
@@ -53,15 +54,16 @@
 
 	<script>
 
-		class ReadMore extends ResponsiveBehavior(BaseElement) {
+		class ReadMore extends UpdateInlineStyleBehavior(ResponsiveBehavior(Polymer.Element)) {
 
 			static get is() { return 'read-more' }
 
 			static get properties() {
 				return {
-					opened: { // true, false
+					opened: {
 						type: String,
 						reflectToAttribute: true,
+						value: 'false', // 'true', 'false'
 						observer: '_onOpenedChange'
 					},
 					mobileOpened: { type: String, reflectToAttribute: true },
@@ -94,8 +96,8 @@
 				}
 
 				this.updateStyles({'--height': 'auto'});
-				var newHeight = this.$.content.offsetHeight;
-				var bound = this._adjustHeight.bind(this, recursion);
+				let newHeight = this.$.content.offsetHeight;
+				let bound = this._adjustHeight.bind(this, recursion);
 				if (newHeight === 0) {
 					this._openRunning = requestAnimationFrame(bound);
 				} else {
