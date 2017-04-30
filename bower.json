@@ -1,8 +1,14 @@
 {
   "name": "grain-read-more",
   "main": "grain-read-more.html",
+  "authors": [
+    "Thomas Allmer <d4kmor@gmail.com>"
+  ],
+  "demos": {
+    "Demo": "demo/index.html"
+  },
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0-rc.2",
+    "polymer": "Polymer/polymer#>=2.0.0-rc.2 <3.0",
     "grain-update-inline-style-behavior": "daKmoR/grain-update-inline-style-behavior",
     "grain-responsive-behavior": "daKmoR/grain-responsive-behavior"
   },
@@ -10,8 +16,5 @@
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
     "web-component-tester": "^6.0.0-prerelease.5",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0-rc.5"
-  },
-  "resolutions": {
-    "polymer": "^2.0.0-rc.2"
   }
 }
