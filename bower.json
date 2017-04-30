@@ -1,10 +1,10 @@
 {
-  "name": "read-more",
-  "main": "read-more.html",
+  "name": "grain-read-more",
+  "main": "grain-read-more.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0-rc.2",
-    "update-inline-style-behavior": "daKmoR/update-inline-style-behavior",
-    "responsive-behavior": "daKmoR/responsive-behavior"
+    "grain-update-inline-style-behavior": "daKmoR/grain-update-inline-style-behavior",
+    "grain-responsive-behavior": "daKmoR/grain-responsive-behavior"
   },
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",

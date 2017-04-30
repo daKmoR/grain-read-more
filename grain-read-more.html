@@ -1,8 +1,8 @@
 <link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="../update-inline-style-behavior/update-inline-style-behavior.html">
-<link rel="import" href="../responsive-behavior/responsive-behavior.html">
+<link rel="import" href="../grain-update-inline-style-behavior/grain-update-inline-style-behavior.html">
+<link rel="import" href="../grain-responsive-behavior/grain-responsive-behavior.html">
 
-<dom-module id="read-more">
+<dom-module id="grain-read-more">
 	<template>
 		<style>
 			:host {
@@ -54,9 +54,9 @@
 
 	<script>
 
-		class ReadMore extends UpdateInlineStyleBehavior(ResponsiveBehavior(Polymer.Element)) {
+		class GrainReadMore extends GrainUpdateInlineStyleBehavior(GrainResponsiveBehavior(Polymer.Element)) {
 
-			static get is() { return 'read-more' }
+			static get is() { return 'grain-read-more' }
 
 			static get properties() {
 				return {
@@ -125,6 +125,6 @@
 		}
 
 		// Register custom element definition using standard platform API
-		customElements.define(ReadMore.is, ReadMore);
+		customElements.define(GrainReadMore.is, GrainReadMore);
 	</script>
 </dom-module>

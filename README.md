@@ -1,13 +1,13 @@
 [![Polymer Version](https://img.shields.io/badge/polymer-v2-blue.svg)](https://www.polymer-project.org)
 
-# \<read-more\>
+# \<grain-read-more\>
 
 Opens more content on click.
 
 ## Installation
 
 ```sh
-$ bower install --save daKmoR/read-more
+$ bower install --save daKmoR/grain-read-more
 ```
 
 ## Getting Started
@@ -15,31 +15,31 @@ $ bower install --save daKmoR/read-more
 Import the package.
 
 ```html
-<link rel="import" href="/bower_components/read-more/read-more.html">
+<link rel="import" href="/bower_components/grain-read-more/grain-read-more.html">
 ```
 
 Create the element providing a more slot.
 
 ```html
-<read-more>
+<grain-read-more>
   <h3>Read More</h3>
   <div slot="more">
-    The Content is only visible if read-more is opened
+    The Content is only visible if grain-read-more is opened
   </div>
-</read-more>
+</grain-read-more>
 ```
 
-* Elements tagged with `slot="more"` will only become visible if read-more is opened.
+* Elements tagged with `slot="more"` will only become visible if grain-read-more is opened.
 * Elements tagged with `slot="intro"` will always be visible.
 * Elements with no slot attributed will trigger opened to be "true"/"false"
 
 ```html
-<read-more opened="true">
+<grain-read-more opened="true">
   <h3>Read More - opened by default</h3>
   <div slot="more">
-    The Content is only visible if read-more is opened
+    The Content is only visible if grain-read-more is opened
   </div>
-</read-more>
+</grain-read-more>
 ```
 
 *For more information, see the API documentation.*
